@@ -30,108 +30,118 @@
     <!------------------------Styling------------------------->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
-        marquee{
-            font-size: 18px;
-            background-color: #ffffff;
-            font-weight: 700;
-            /*opacity: .5;*/
-        }
-        html,body{
-            width: 100%;
-            height: 100%;
-            overflow-x: hidden;
-            -ms-overflow-style:none;
-        }
+        
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
 </head>
 
 
 
-<body style="background: url(images/back.jpg); background-position: center;background-repeat: repeat;background-size: 100%;">
+<body> <!-- style="background: url(images/back.jpg); background-position: center;background-repeat: repeat;background-size: 100%;" -->
     <!------------------------Page Layout Content------------------------->
     <header>
-        <p style="font-family: 'Roboto ',monospace;font-size: 35px">Real Time Weather Station &nbsp;Tutodu Educational Services Pvt Ltd.</p>
+        <p>Meteorological-Station<!-- &nbsp;&nbsp;Tutodu Educational Services Pvt Ltd.&nbsp;&nbsp;Mar Augusthinose College, Ramapuram --></p>
+        <p style="font-size: 21px;font-weight: 500;">
+            Tutodu Educational Services Pvt Ltd. & IEDC MAC Ramapuram
+        <p>
     </header>
-    <div>
-        <marquee>
-             In association with IEDC Mar Augusthinose College,Ramapuram
-        </marquee>
-    </div>
+
     <div class="container" style="margin-top: 2%;">
         <div class="row gx-5">
-            <div class="col-md-4" style="height: 150px;">
-                <div style="height: 130px;background-color: whitesmoke;border-radius: 15px;" class="sha">
+            <div class="col-md-4 outer">
+                <div class="sha">
                     <h2 class="animate__animated animate__tada" style="text-align: center;">Temperature</h2>
                     <img src="images/temp.png" class="im"><br>
-                    <p id="temp" style="font-size: 35px;font-family: Times New Roman sans-serif;"></p>
+                    <p id="temp" class="id"></p>
                 </div>
             </div>
-            <div class="col-md-4" style="height: 150px;">
-                <div style="height: 130px;background-color: whitesmoke;border-radius: 15px;" class="sha">
+            <div class="col-md-4 outer">
+                <div class="sha">
                     <h2 class="animate__animated animate__tada">Humidity</h2>
                     <img src="images/hum.png" class="im"><br>
-                    <p id="hum" style="font-size: 35px;font-family: Times New Roman sans-serif;"></p>
+                    <p id="hum" class="id"></p>
 
                 </div>
             </div>
-            <div class="col-md-4" style="height: 150px;">
-                <div style="height: 130px;background-color: whitesmoke;border-radius: 15px;" class="sha">
+            <div class="col-md-4 outer">
+                <div class="sha">
                     <h2 class="animate__animated animate__tada">Pressure</h2>
                     <img src="images/pre.png" class="im"><br>
-                    <p id="pre" style="font-size: 35px;font-family: Times New Roman sans-serif;"></p>
+                    <p id="pre" class="id"></p>
                 </div>
             </div>
-            <div class="col-md-4"style="height: 150px;">
-                <div style="height: 130px;background-color: whitesmoke;border-radius: 15px;" class="sha">
+            <div class="col-md-4 outer">
+                <div class="sha">
                     <h2 class="animate__animated animate__tada">Wind Speed</h2>
                     <img src="images/wind.png" class="im"><br>
-                    <p id="wind" style="font-size: 35px;font-family: Times New Roman sans-serif;"></p>
-                    
+                    <p id="wind" class="id"></p>
                 </div>
             </div>
-            <div class="col-md-4"style="height: 150px;">
-                <div style="height: 130px;background-color: whitesmoke;border-radius: 15px;" class="sha">
+            <div class="col-md-4 outer">
+                <div class="sha">
                     <h2 class="animate__animated animate__tada">Altitude</h2>
                     <img src="images/alti.png" class="im"><br>
-                    <p id="alti" style="font-size: 35px;font-family: Times New Roman sans-serif;"></p>
+                    <p id="alti" class="id"></p>
                 </div>
             </div>
-            <div class="col-md-4"style="height: 150px;">
-                <div style="height: 130px;background-color: whitesmoke;border-radius: 15px;" class="sha">
+            <div class="col-md-4 outer">
+                <div class="sha">
                     <h2 class="animate__animated animate__tada">UV</h2>
                     <img src="images/uv.png" class="im"><br>
-                    <p id="uvindex" style="font-size: 35px;font-family: Times New Roman sans-serif;"></p>
+                    <p id="uvindex" class="id"></p>
                 </div>
             </div>
-            <div class="col-md-4"style="height: 150px;">
-                <div style="height: 130px;background-color: whitesmoke;border-radius: 15px;" class="sha">
+            <div class="col-md-4 outer">
+                <div class="sha">
                     <h2 class="animate__animated animate__tada">Light</h2>
                     <img src="images/light.png" class="im"><br>
-                    <p id="light" style="font-size: 35px;font-family: Times New Roman sans-serif;"></p>
+                    <p id="light" class="id"></p>
                 </div>
             </div>
-            <div class="col-md-4"style="height: 150px;">
-                <div style="height: 130px;background-color: whitesmoke;border-radius: 15px;" class="sha">
+            <div class="col-md-4 outer">
+                <div class="sha">
                     <h2 class="animate__animated animate__tada">Wind Direction</h2>
                     <img src="images/winddir1.png" class="im"><br>
-                    <!-- <p id="deg" style="font-size: 35px;font-family: Times New Roman sans-serif;"></p> -->
-                    <p id="dir" style="font-size: 35px;font-family: Times New Roman sans-serif;"></p>
+                    <!-- <p id="deg" class="id"></p> -->
+                    <p id="dir" class="id"></p>
                 </div>
             </div>
-            <div class="col-md-4"style="height: 150px;">
-                <div style="height: 130px;background-color: whitesmoke;border-radius: 15px;" class="sha">
+            <div class="col-md-4 outer">
+                <div class="sha">
                     <h2 class="animate__animated animate__tada">Cloud</h2>
                     <img src="images/clouds1.png" class="im"><br>
-                    <p id="clo" style="font-size: 35px;font-family: Times New Roman sans-serif;"></p>
+                    <p id="clo" class="id"></p>
                 </div>
             </div>
+            <!-- <div class="col-md-4 outer">
+                <div class="sha">
+                    <h2 class="animate__animated animate__tada">Rain</h2>
+                    <img src="images/rain.png" class="im"><br>
+                    <p id="rain" class="id"></p>
+                </div>
+            </div>
+            <div class="col-md-4 outer">
+                <div class="sha">
+                    <h2 class="animate__animated animate__tada">Sunrise</h2>
+                    <img src="images/sunrise.png" class="im"><br>
+                    <p id="rise" class="id"></p>
+                </div>
+            </div>
+            <div class="col-md-4 outer">
+                <div class="sha">
+                    <h2 class="animate__animated animate__tada">Sunset</h2>
+                    <img src="images/sunset.png" class="im"><br>
+                    <p id="set" class="id"></p>
+                </div>
+            </div> -->
         </div> 
     </div>
 
     <footer>
-        <p style="align-content: center;font-weight: 500"><!-- 2022&copy; Mar Augusthinose College Weather Station-->2022&copy; Tutodu Educational Services Pvt Ltd.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Developed By Christo Joseph and Toney Abraham (R&D Team Tutodu)</p>
+        <p><!-- 2022&copy; Mar Augusthinose College Weather Station-->2022&copy; Tutodu Educational Services Pvt Ltd.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Developed By Christo Joseph and Toney Abraham (R&D Team Tutodu)</p>
     </footer>
-    <!------------------------Page Layout Content------------------------->
 
     <!------------------------Scripting------------------------->
     <!-- <script src="js/main.js"></script> -->
@@ -149,9 +159,9 @@
         .catch(function (err) {
             console.log('error: ' + err);
         });
-        function convertion(val) {
-            return (val - 273.15).toFixed(2);
-        }
+        // function convertion(val) {
+        //     return (val - 273.15).toFixed(2);
+        // }
         function direction(deg){
             let direction;
             if ((deg >0)&&(deg<22.5))
@@ -175,24 +185,34 @@
             document.getElementById("dir").innerHTML = direction;
         }
         function appendData(data) {
-            var air = document.getElementById("wind");
-            var c = document.getElementById("clo");
+            var win = data["wind"]["speed"];
+            let wind = document.getElementById("wind");
+            wind.innerHTML =win+"&nbsp;m/s";
+
+            var c = data["clouds"]["all"];
+            let clo = document.getElementById("clo");
+            clo.innerHTML = c+"&nbsp;%";
+
             var d = document.getElementById("deg");
-
-            var wndspd = data["wind"]["speed"];
-            var div = document.createElement("div");
-            div.innerHTML = `${wndspd}&nbsp;m/s`;           // div.innerHTML = data.name;
-            air.appendChild(div);
-
-            var clo = data["clouds"]["all"];
-            var div = document.createElement("div");
-            div.innerHTML = `${clo}&nbsp;%`;
-            c.appendChild(div);
 
             var deg = data["wind"]["deg"];
             var div = document.createElement("div");
             div.innerHTML = `<span>${direction(deg)}</span>`;
             d.appendChild(div);
+
+            var sr = data["sys"]["sunrise"];
+            let rise = document.getElementById("rise");
+            rise.innerHTML = sr;
+
+            var ss = data["sys"]["sunset"];
+            let set = document.getElementById("set");
+            set.innerHTML = ss;
+
+            var r = data["weather"]["id"];
+            let rain = document.getElementById("rain");
+            rain.innerHTML = r;
+
+            
         }
     </script>
     <!-- Configuration of firebase -->
@@ -218,47 +238,29 @@
         // document.write(data[i]);
         // document.getElementById("temp").innerHTML=(data[i]);
       }
-      var t = document.getElementById("temp")
+      var t = data["temp"];
+      let temp = document.getElementById("temp");
+      temp.innerHTML = t+"&nbsp;&#8451";
 
-      var temp = data["temp"];
-      var div = document.createElement("div");
-      div.innerHTML = `${temp}&nbsp;&#8451`;
-      t.appendChild(div);
+      var h = data["hum"];
+      let hum = document.getElementById("hum");
+      hum.innerHTML = h+"&nbsp;g.&#13221;";
 
-      var h = document.getElementById("hum")
+      var p = data["pressure"];
+      let pre = document.getElementById("pre");
+      pre.innerHTML = p+"&nbsp;hPa";
 
-      var hum = data["hum"];
-      var div = document.createElement("div");
-      div.innerHTML = `${hum}&nbsp;g.&#13221;`;
-      h.appendChild(div);
+      var a = data["altitude"];
+      let alti = document.getElementById("alti");
+      alti.innerHTML = a+"&nbsp;meter";
 
-      var p = document.getElementById("pre")
+      var l = data["lightindex"];
+      let light = document.getElementById("light");
+      light.innerHTML = l+"&nbsp;lm/&#13217;";
 
-      var pre = data["pressure"];
-      var div = document.createElement("div");
-      div.innerHTML = `${pre}&nbsp;hPa`;
-      p.appendChild(div);
-
-      var a = document.getElementById("alti")
-
-      var alti = data["altitude"];
-      var div = document.createElement("div");
-      div.innerHTML = `${alti}&nbsp;meter`;
-      a.appendChild(div);
-
-      var l = document.getElementById("light")
-
-      var light = data["lightindex"];
-      var div = document.createElement("div");
-      div.innerHTML = `${light}&nbsp;lm/&#13217;`;
-      l.appendChild(div);
-
-      var u = document.getElementById("uvindex")
-
-      var uv = data["uvindex"];
-      var div = document.createElement("div");
-      div.innerHTML = `${uv}&nbsp;mW/&#13216;`;
-      u.appendChild(div);
+      var u =data["uvindex"];
+      let uv =document.getElementById("uvindex");
+      uvindex.innerHTML = u+"&nbsp;mW/&#13216;";
     })
 </script>
 </body>
