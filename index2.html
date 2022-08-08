@@ -35,6 +35,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1f8fcc82f7.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -42,14 +43,24 @@
 <body> <!-- style="background: url(images/back.jpg); background-position: center;background-repeat: repeat;background-size: 100%;" -->
     <!------------------------Page Layout Content------------------------->
     <header>
-        <p>Meteorological-Station<!-- &nbsp;&nbsp;Tutodu Educational Services Pvt Ltd.&nbsp;&nbsp;Mar Augusthinose College, Ramapuram --></p>
-        <p style="font-size: 21px;font-weight: 500;">
+        <p style="margin-bottom: 0px">
+            Meteorological-Station
+        </p>
+        <p style="font-size: 21px;font-weight: 500;margin-bottom: 0px;">
             Tutodu Educational Services Pvt Ltd. & IEDC MAC Ramapuram
         </p>
-        <div id="clock"></div>
     </header>
+    <div>
+        <span id="clock" class="clock" style="float: left;margin-left: 15%;">
+        </span>
+        <span class="clock" style="float: right;margin-right: 15%;">
+            <a href="https://goo.gl/maps/RbSJVyPNU1b9C8Yq8" target="_blank" style="color: inherit;text-decoration: none;">
+                <i class="fa-solid fa-map-location-dot"></i>: Ramapuram
+            </a>
+        </span>
+    </div>
 
-    <div class="container" style="margin-top: 2%; margin-bottom: 2%;">
+    <div class="container" style="margin-bottom: 2%;">
         <div class="row gx-5">
             <div class="col-md-3 outer">
                 <div class="sha">
@@ -186,7 +197,7 @@
             document.getElementById("dir").innerHTML = direction;
         }
         function appendData(data) {
-            
+
             var r = data["weather"];
             var r1 = JSON.stringify(r);
             var r2 = r1.split(',');
@@ -228,9 +239,19 @@
           let mm = date.getMinutes();
           let ss = date.getSeconds();
           let session = "AM";
+          let yy = date.getFullYear();
+          const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+          let mon = month[date.getMonth()];
+          let dd = date.getDate();
+          let da = dd+" "+mon+" "+yy+" ";
 
 
+
+          if(hh == 0){
+              hh = 12;
+          }
           if(hh > 12){
+              hh = hh - 12;
               session = "PM";
           }
 
@@ -238,16 +259,16 @@
           mm = (mm < 10) ? "0" + mm : mm;
           ss = (ss < 10) ? "0" + ss : ss;
 
-          let time = hh + ":" + mm + ":" + ss;
+          let time = da+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+hh + ":" + mm + ":" + ss + " " +session;
 
           document.getElementById("clock").innerText = time; 
           var t = setTimeout(function(){ currentTime() }, 1000); 
 
       }
       currentTime();
-    </script>
-    <!-- Configuration of firebase -->
-    <script>
+  </script>
+  <!-- Configuration of firebase -->
+  <script>
     // Your web app's Firebase configuration
     var firebaseConfig={
      apiKey: "AIzaSyBwbDEgSwynRtNoqVAuDQw6erp_OZUhBS0",
@@ -268,31 +289,31 @@
         console.log(data[i]);
         // document.write(data[i]);
         // document.getElementById("temp").innerHTML=(data[i]);
-      }
-      var t = data["temp"];
-      let temp = document.getElementById("temp");
-      temp.innerHTML = t+"&nbsp;&#8451";
+    }
+    var t = data["temp"];
+    let temp = document.getElementById("temp");
+    temp.innerHTML = t+"&nbsp;&#8451";
 
-      var h = data["hum"];
-      let hum = document.getElementById("hum");
-      hum.innerHTML = h+"&nbsp;g.&#13221;";
+    var h = data["hum"];
+    let hum = document.getElementById("hum");
+    hum.innerHTML = h+"&nbsp;g.&#13221;";
 
-      var p = data["pressure"];
-      let pre = document.getElementById("pre");
-      pre.innerHTML = p+"&nbsp;hPa";
+    var p = data["pressure"];
+    let pre = document.getElementById("pre");
+    pre.innerHTML = p+"&nbsp;hPa";
 
-      var a = data["altitude"];
-      let alti = document.getElementById("alti");
-      alti.innerHTML = a+"&nbsp;meter";
+    var a = data["altitude"];
+    let alti = document.getElementById("alti");
+    alti.innerHTML = a+"&nbsp;meter";
 
-      var l = data["lightindex"];
-      let light = document.getElementById("light");
-      light.innerHTML = l+"&nbsp;lm/&#13217;";
+    var l = data["lightindex"];
+    let light = document.getElementById("light");
+    light.innerHTML = l+"&nbsp;lm/&#13217;";
 
-      var u =data["uvindex"];
-      let uv =document.getElementById("uvindex");
-      uvindex.innerHTML = u+"&nbsp;mW/&#13216;";
-    })
+    var u =data["uvindex"];
+    let uv =document.getElementById("uvindex");
+    uvindex.innerHTML = u+"&nbsp;mW/&#13216;";
+})
 </script>
 </body>
 </html>
