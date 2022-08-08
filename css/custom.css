@@ -58,7 +58,7 @@ html,body{
 	font-family: Times New Roman sans-serif;
 }
 
-header p{
+header{
 	font-family: 'Secular One', sans-serif;
 	font-size: 35px;color: white;
 }
@@ -66,8 +66,12 @@ header p{
 header,footer{
 	background-color: #29A0B1;
 }
-footer p{
-	align-content: center;
+footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
 	font-weight: 500;
 	color: white;
 }
