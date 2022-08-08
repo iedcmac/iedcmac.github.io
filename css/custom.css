@@ -63,6 +63,12 @@ header{
 	font-size: 35px;color: white;
 	height: 100px;
 }
+header div{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 10px;
+}
 
 header,footer{
 	background-color: #29A0B1;
