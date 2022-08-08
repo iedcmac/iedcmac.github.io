@@ -14,7 +14,7 @@
 
 }*/
 .im{
-	height: 50px;
+	height: 60px;
 	float: left;
 	margin-left: 20%;
 	margin-top: 5%;
@@ -27,7 +27,7 @@
     /*box-shadow: none;*/
     box-shadow: 2px 2px 15px black;
     height: 130px;
-    background-color: whitesmoke;
+    background-color: white;
     border-radius: 15px;
 }
 meter::-webkit-meter-optimum-value {
