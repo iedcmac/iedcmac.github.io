@@ -48,7 +48,7 @@
         <p>
     </header>
 
-    <div class="container" style="margin-top: 2%;">
+    <div class="container" style="margin-top: 2%; margin-bottom: 4%;">
         <div class="row gx-5">
             <div class="col-md-4 outer">
                 <div class="sha">
@@ -194,6 +194,17 @@
             var r4 = r3[1].replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
             rain.innerHTML = r4;
 
+            var sr = data["sys"]["sunrise"];
+            var s = new Date(sr*1000).toLocaleTimeString("en-US");
+            // console.log(s)
+            let rise = document.getElementById("rise");
+            rise.innerHTML = s;
+
+            var ss = data["sys"]["sunset"];
+            var s1 = new Date(ss*1000).toLocaleTimeString("en-US");
+            let set = document.getElementById("set");
+            set.innerHTML = s1;
+
             var win = data["wind"]["speed"];
             let wind = document.getElementById("wind");
             wind.innerHTML =win+"&nbsp;m/s";
@@ -207,22 +218,7 @@
             var deg = data["wind"]["deg"];
             var div = document.createElement("div");
             div.innerHTML = `<span>${direction(deg)}</span>`;
-            d.appendChild(div);
-
-            var sr = data["sys"]["sunrise"];
-            let rise = document.getElementById("rise");
-            rise.innerHTML = sr;
-
-            var ss = data["sys"]["sunset"];
-            let set = document.getElementById("set");
-            set.innerHTML = ss;
-
-
-            // var r = data["weather"]["id"];
-            // let rain = document.getElementById("rain");
-            // rain.innerHTML = r;
-
-            
+            d.appendChild(div);            
         }
     </script>
     <!-- Configuration of firebase -->
@@ -275,3 +271,6 @@
 </script>
 </body>
 </html>
+<!-- // var r = data["weather"]["id"];
+    // let rain = document.getElementById("rain");
+    // rain.innerHTML = r; -->
