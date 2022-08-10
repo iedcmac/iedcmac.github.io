@@ -225,6 +225,10 @@
             let clo = document.getElementById("clo");
             clo.innerHTML = c+"&nbsp;%";
 
+            var p = data["main"]["pressure"];
+            let pre = document.getElementById("pre");
+            pre.innerHTML = p+"&nbsp;hPa";
+
             var d = document.getElementById("deg");
 
             var deg = data["wind"]["deg"];
@@ -298,11 +302,12 @@
     let hum = document.getElementById("hum");
     hum.innerHTML = h+"&nbsp;g.&#13221;";
 
-    var p = data["pressure"];
-    let pre = document.getElementById("pre");
-    pre.innerHTML = p+"&nbsp;hPa";
+    // var p = data["pressure"];
+    // let pre = document.getElementById("pre");
+    // pre.innerHTML = p+"&nbsp;hPa";
 
-    var a = data["altitude"];
+    // var a = data["altitude"];
+    var a =64;
     let alti = document.getElementById("alti");
     alti.innerHTML = a+"&nbsp;meter";
 
